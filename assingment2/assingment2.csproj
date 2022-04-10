@@ -127,11 +127,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ModulesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Courses.cs" />
     <Compile Include="Models\Modules.cs" />
+    <Compile Include="Models\Students.cs" />
+    <Compile Include="Models\StudentsModulesViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -173,6 +176,7 @@
     <Content Include="Views\Modules\Details.cshtml" />
     <Content Include="Views\Modules\Index.cshtml" />
     <Content Include="Views\Modules\Edit.cshtml" />
+    <Content Include="Views\Modules\_StudentsModulesLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
