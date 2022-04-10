@@ -1,12 +1,18 @@
-﻿@model assingment2.Models.Modules
+﻿@model assingment2.Models.StudentsModulesViewModels
 
 @{
     ViewBag.Title = "Details";
+    Layout = "~/Views/Modules/_StudentsModulesLayout.cshtml";
 }
+@section Students {
 
-<h2> Course: Computer Science</h2>
-<h2>@Model.ModuleID</h2>
-<h3>@Model.ModuleCode</h3>
-<p>@Model.ModuleTitle</p>
-<p><strong>@Model.StartDate</strong></p>
-<p><strong>@Model.EndDate</strong></p>
+    <h2>Student info:</h2>
+    <p><strong>First Name:</strong> @Model.Students.FirstName</p>
+    <p><strong>First Name:</strong> @Model.Students.LastName</p>
+}
+@section Modules {
+
+    <h2>@Model.Modules.ModuleID</h2>
+    <h3>@Model.Modules.ModuleTitle</h3>
+    <p>@Model.Modules.ModuleCode</p>
+}
