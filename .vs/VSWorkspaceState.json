@@ -1,6 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\assingment2",
+    "\\assingment2\\Controllers",
+    "\\assingment2\\Models",
+    "\\assingment2\\Views",
+    "\\assingment2\\Views\\Home",
+    "\\assingment2\\Views\\Modules"
   ],
+  "SelectedNode": "\\assingment2\\Controllers\\ModulesController.cs",
   "PreviewInSolutionExplorer": false
 }

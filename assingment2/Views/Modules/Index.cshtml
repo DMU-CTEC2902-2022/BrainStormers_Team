@@ -1,0 +1,15 @@
+﻿@model List<assingment2.Models.Modules>
+
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Index</h2>
+<ul>
+    @foreach (var modules in @Model)
+    {
+        <li><a href="~/Modules/Details/@modules.ModuleID">@modules.ModuleTitle</a></li>
+        
+    }
+</ul>
+
+
