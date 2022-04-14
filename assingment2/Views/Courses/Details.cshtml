@@ -1,0 +1,82 @@
+﻿@model assingment2.Models.Courses
+
+@{
+    Layout = null;
+}
+@{
+    ViewBag.Title = "Home Page";
+} @Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+@Scripts.Render("~/bundles/jquery")
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    @{
+        ViewBag.Title = "Home Page";
+    }
+
+    <div class="container">
+        <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
+
+
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    @Html.ActionLink("Information and Technology College ", "Index", "Home", new { area = "" }, new
+{ @class = "navbar-brand" })
+        </nav>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+        <div>
+            <h4>Courses</h4>
+            <hr />
+            <table class="table table-striped">
+               
+                <thead>
+                    <tr>
+                        <th scope="col"> @Html.DisplayNameFor(model => model.CourseId)</th>
+                        <th scope="col">
+                            @Html.DisplayNameFor(model => model.CourseFee)
+                        </th>
+                        <th scope="col">
+                            @Html.DisplayNameFor(model => model.CourseName)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">
+                            @Html.DisplayFor(model => model.CourseId)
+                        </th>
+                       
+                   
+                        <td >
+                            @Html.DisplayFor(model => model.CourseFee)
+                        </td>
+                       
+                    
+                        <td>
+                            @Html.DisplayFor(model => model.CourseName)
+                        </td>
+                      
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>
+            @Html.ActionLink("Check Modules", "../Modules/Index") |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </div>
+    <div class="container body-content"style="margin-top:600px">
+
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Information And Technology College</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using System.Data.Entity;
+using assingment2.Models;
 
 namespace assingment2
 {
@@ -12,6 +14,8 @@ namespace assingment2
     {
         protected void Application_Start()
         {
+            Database.SetInitializer(new ModuleDataInitialiser());
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

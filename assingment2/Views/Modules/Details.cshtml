@@ -1,18 +1,93 @@
 ﻿@model assingment2.Models.StudentsModulesViewModels
 
-@{
-    ViewBag.Title = "Details";
-    Layout = "~/Views/Modules/_StudentsModulesLayout.cshtml";
-}
-@section Students {
 
-    <h2>Student info:</h2>
-    <p><strong>First Name:</strong> @Model.Students.FirstName</p>
-    <p><strong>First Name:</strong> @Model.Students.LastName</p>
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Modules/_StudentsModulesLayout.cshtml";
+
+}
+
+@section Students {
+    <div class="container">
+
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+        <h2>Module Information</h2>
 }
 @section Modules {
 
-    <h2>@Model.Modules.ModuleID</h2>
-    <h3>@Model.Modules.ModuleTitle</h3>
-    <p>@Model.Modules.ModuleCode</p>
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
+
+
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    @Html.ActionLink("Information and Technology College ", "Index", "Home", new { area = "" }, new
+{ @class = "navbar-brand" })
+    </nav>
+    <div>
+        <div>
+            <table class="table table-striped">
+
+                <thead>
+                    <tr>
+                        <th scope="col">
+                            @Html.DisplayNameFor(model => model.Modules.ModuleID)
+                        </th>
+                        <th scope="col">
+                            @Html.DisplayNameFor(model => model.Modules.CourseId)
+                        </th>
+                        <th scope="col">
+                            @Html.DisplayNameFor(model => model.Modules.ModuleCode)
+                        </th>
+                        <th scope="col">
+                            @Html.DisplayNameFor(model => model.Modules.ModuleTitle)
+                        </th>
+                        <th scope="col">
+                            @Html.DisplayNameFor(model => model.Modules.StartDate)
+                        </th>
+                        <th scope="col">
+                            @Html.DisplayNameFor(model => model.Modules.EndDate)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">
+                            @Html.DisplayFor(model => model.Modules.ModuleID)
+                        </th>
+
+
+                        <td>
+                            @Html.DisplayFor(model => model.Modules.CourseId)
+                        </td>
+
+
+                        <td>
+                            @Html.DisplayFor(model => model.Modules.ModuleCode)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.Modules.ModuleTitle)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.Modules.StartDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.Modules.EndDate)
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>         
+        @Html.ActionLink("Back to Module List", "../Modules/Index")
+
+    <div class="container body-content" style="margin-top:500px">
+
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Information And Technology College</p>
+        </footer>
+    </div>
 }
+</div>

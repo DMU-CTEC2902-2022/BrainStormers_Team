@@ -1,0 +1,69 @@
+﻿@model IEnumerable<assingment2.Models.Courses>
+
+@{
+    Layout = null;
+}
+@{
+    ViewBag.Title = "Home Page";
+} @Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+@Scripts.Render("~/bundles/jquery")
+@*@Scripts.Render("~/bundles/bootstrap")*@
+@*@RenderSection("scripts", required: false)*@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Courses</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
+
+
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    @Html.ActionLink("Information and Technology College ", "Index", "Home", new { area = "" }, new
+{ @class = "navbar-brand" })
+        </nav>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <table class="table">
+            <tr>
+                @*<th>
+                    @Html.DisplayNameFor(model => model.CourseFee)
+                </th>*@
+                <th>
+                    @Html.DisplayNameFor(model => model.CourseName)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    @*<td>
+                        @Html.DisplayFor(modelItem => item.CourseFee)
+                    </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CourseName)
+                    </td>
+                    <td>
+                        @*@Html.ActionLink("Edit", "Edit", new { id=item.CourseId }) |*@
+                        @Html.ActionLink("Details", "Details", new { id = item.CourseId }) |
+                        @*@Html.ActionLink("Delete", "Delete", new { id=item.CourseId })*@
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+        <div class="container body-content" style="margin-top:600px">
+
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Information And Technology College</p>
+            </footer>
+        </div>
+</body>
+
+</html>
