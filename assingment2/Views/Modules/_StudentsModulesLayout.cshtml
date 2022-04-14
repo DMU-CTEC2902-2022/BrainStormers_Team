@@ -6,11 +6,19 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <div>
-        @RenderSection("Students")
-    </div>
-    <div>
-        @RenderSection("Modules")
-    </div>
+   
+        <div>
+                @RenderSection("Students")
+            </div>
+        <div>
+            @RenderSection("Modules")
+       
+        </div>
+        
 </body>
 </html>
+@{
+    ViewBag.Title = "Home Page";
+} @Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+@Scripts.Render("~/bundles/jquery")

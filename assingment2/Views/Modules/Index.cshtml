@@ -1,15 +1,29 @@
 ﻿@model  List<assingment2.Models.Modules>
 
+
+
 @{
-    ViewBag.Title = "Index";
-}
+    ViewBag.Title = "Home Page";
+} @Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+@Scripts.Render("~/bundles/jquery")
+<div class="container">
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
 
-<h2>Index</h2>
 
-<ul>
-    @foreach (var modules in @Model)
-    {
-    <li>><a href="~/Modules/Details/@modules.ModuleID">@modules.ModuleID</a></li>
-        
-    }
-</ul>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    @Html.ActionLink("Information and Technology College ", "Index", "Home", new { area = "" }, new
+{ @class = "navbar-brand" })
+    </nav>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    <h2 style="margin-top:30px">All College Courses</h2>
+
+    <ul>
+        @foreach (var modules in @Model)
+        {
+            <li> <span class="badge badge-primary"><a href="~/Modules/Details/@modules.ModuleID">@modules.ModuleTitle</a></span></li>
+
+
+        }
+    </ul>
+</div>
