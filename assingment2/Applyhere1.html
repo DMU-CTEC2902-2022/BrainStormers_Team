@@ -1,0 +1,72 @@
+﻿<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        input[type=text], select, textarea {
+            width: 100%; /* Full width */
+            padding: 12px; /* Some padding */
+            border: 1px solid #ccc; /* Gray border */
+            border-radius: 4px; /* Rounded borders */
+            box-sizing: border-box; /* Make sure that padding and width stays in place */
+            margin-top: 6px; /* Add a top margin */
+            margin-bottom: 16px; /* Bottom margin */
+            resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+        }
+
+        /* Style the submit button with a specific background color etc */
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            /* When moving the mouse over the submit button, add a darker green color */
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+
+        /* Add a background color and some padding around the form */
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="action_page.php">
+            <h1>Application Form</h1>
+            <h2>Qualification/ Education</h2>
+            <label for="fname">High School</label>
+            <input type="text" id="fname" placeholder="Your High school">
+
+            <label for="fname">1st Qualification</label>
+            <input type="text" id="fname" placeholder="Your 1st Qualification">
+            <label for="fname">2nd Qualification</label>
+            <input type="text" id="fname" placeholder="Your 2nd Qualification">
+            <label for="fname">3rd Qualification</label>
+            <input type="text" id="fname" placeholder="Your 3rd Qualification">
+            <label for="fname">4th Qualification</label>
+            <input type="text" id="fname" placeholder="Your 4th Qualification">
+            <label for="fname">5th Qualification</label>
+            <input type="text" id="fname" placeholder="Your 5th Qualification">
+
+            <BUTTON TYPE="button" ONCLICK="alert('Your application has been submitted')">Submit</BUTTON>
+
+            <a class="btn btn-danger" href="https://localhost:44303" role="button">Back To Home Page</a>
+            
+           
+        </form>
+    </div>
+
+</body>
+</html>
